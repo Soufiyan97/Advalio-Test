@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us</title>
+    <link rel="stylesheet" href="style7.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <header>
+        <div id="logo">AD<a id="logo-s">VALIO</a></div>
+      </header>
+      <div id="sideNav">
+        <nav>
+          <ul>
+            <li><a href="#">HOME</a></li>
+            <li><a href="#">SERVICES</a></li>
+            <li><a href="#">PRODUCTS AND SOULTIONS</a></li>
+            <li><a href="#">CLIENTS</a></li>
+            <li><a href="#">PARTNERS</a></li>
+            <li><a href="#">NEWS</a></li>
+            <li><a href="#">ABOUT US</a></li>
+            <li><a href="#">CONTACT US</a></li>
+          </ul>
+        </nav>
+      </div>
+      <div id="manuBtn">
+          <img src="images/menu.png" id="menu">
+      </div>
+        <div class="hero">
+            <div class="hero__content">
+              <h1 class="hero__title">About Us</h1>
+              <p class="hero__text">More informations about us</p>
+            </div>
+          </div>
+
+          <section class="news reveal">
+                
+            <div class="news-row">
+                <div class="news-column">
+                    <div class="news-box">
+                        <div class="news-content reveal">
+                            <div class="content">
+                                <div class="year"><i class='bx bx-diamond'></i>OUR APPROACH</div>
+                                <p>Better is always possible … From this perspective, we work with our customers to continuously improve their network performances.</p>
+                            </div>
+                        </div>
+
+                        <div class="news-content reveal">
+                            <div class="content">
+                                <div class="year"><i class='bx bx-diamond'></i> OUR STRONG POINTS</div>
+                                    <div class="element"><i class='bx bx-check'></i>A specialized experience accumulated in large projects</div>
+                                    <div class="element"><i class='bx bx-check'></i>A great adaptability</div>
+                                    <div class="element"><i class='bx bx-check'></i>Reduced cost for network solutions</div>
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+
+                <div class="news-column">
+                    <div class="news-box">
+                        <div class="news-content reveal">
+                            <div class="content">
+                                <div class="year"><i class='bx bx-diamond'></i> OUR VISION</div>
+                                <p>Being recognized as an effective partner network solution.</p>
+                            </div>
+                        </div>
+
+                        <div class="news-content reveal">
+                            <div class="content">
+                                <div class="year"><i class='bx bx-diamond'></i> OUR VALUES</div>
+                                <div class="element"><i class='bx bx-check'></i>Customer Satisfaction: This is the heart of all our strategies. We give special attention to the needs of our customers and we are determined to keep their trusts. A satisfied customer is a clear guarantee of the development of our business.</div>
+                                <div class="element"><i class='bx bx-check'></i>Spirit of Partnership: Advalio is determined to forge a long term partnership with its clients.</div>
+                                <div class="element"><i class='bx bx-check'></i>Passion: Because we believe that the work is also a moment of passion and enthusiasm, we encourage and adopt</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+          </section>
+
+          <section id="footer">
+            <img src="images/istockphoto-1296961956-1024x1024-removebg-preview.png" class="footer-img">
+            <div class="title-text">
+              <p>MORE INFORMATIONS</p>
+             </div>
+             <div class="footer-row">
+              <div class="footer-left">
+                <img src="images/advalio-removebg-preview.png">
+              </div>
+              <div class="footer-right">
+                <h1>Get In Touch</h1>
+                <p><i class="fa fa-map-marker" ></i>Immeuble Mathis, 571 Souissi, Avenue Mohamed VI, Bloc A 2ème étage, Rabat 10000, Maroc</p>
+                <p><i class="fa fa-paper-plane"></i>contact@advalio-ma.com</p>
+                <p><i class="fa fa-phone"></i>+212 (0) 5 38 00 69 20</p>
+              </div>
+             </div>
+             <div class="social-links">
+              <i class="fa fa-facebook"></i>
+              <i class="fa fa-instagram"></i>
+              <i class="fa fa-twitter"></i>
+              <i class="fa fa-linkedin"></i>
+              <p>© 2017 All rights reserved.</p>
+             </div>
+          </section>
+          <script>
+            var manuBtb = document.getElementById("manuBtn");
+            var sideNav = document.getElementById("sideNav");
+            var menu = document.getElementById("menu");
+            
+            sideNav.style.right="-250px"
+            manuBtb.onclick= function(){
+                if(sideNav.style.right=="-250px"){
+                  sideNav.style.right="0";
+                  menu.src="images/close.png";
+                }
+                else{
+                  sideNav.style.right="-250px";
+                  menu.src="images/menu.png";
+                }
+            }
+          </script>
+
+<script>
+  window.addEventListener('scroll',reveal);
+  function reveal(){
+      var reveals=document.querySelectorAll('.reveal');
+      for(var i=0;i<reveals.length;i++){
+          var windowheight=window.innerHeight;
+          var revealtop = reveals[i].getBoundingClientRect().top;
+          var revealpoint=150;
+          if(revealtop<windowheight-revealpoint){
+              reveals[i].classList.add('active');
+          }
+          else{
+              reveals[i].classList.remove('active');
+          }
+      }
+  }
+</script>
+          
+</body>
+</html>

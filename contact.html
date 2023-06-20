@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="style2.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+  <script src="contact.js"></script>
+      <script type="text/javascript"
+            src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js">
+    </script>
+    <script type="text/javascript">
+       (function(){
+          emailjs.init("89LzxXx-6rCUh2lwT");
+       })();
+    </script>
+</head>
+<body>
+  <div id="sideNav">
+    <nav>
+      <ul>
+        <li><a href="#">HOME</a></li>
+        <li><a href="#">SERVICES</a></li>
+        <li><a href="#">PRODUCTS AND SOULTIONS</a></li>
+        <li><a href="#">CLIENTS</a></li>
+        <li><a href="#">PARTNERS</a></li>
+        <li><a href="#">NEWS</a></li>
+        <li><a href="#">ABOUT US</a></li>
+        <li><a href="#">CONTAC US</a></li>
+      </ul>
+    </nav>
+  </div>
+  <div id="manuBtn">
+      <img src="images/menu.png" id="menu">
+  </div>
+  <div class="contact-title">
+    <h1>WELCOME</h1>
+    <h2>We are always ready to serve you!</h2>
+  </div>
+  <div class="contact-form">
+      <form id="contact-form" onsubmit="sendEmail() ; reset();return false;">
+        <input name="name" type="text" class="form-control" placeholder="Your Name"><br>
+        <input name="email" id="email" type="text" class="form-control" placeholder="Your email"><br>
+        <textarea name="message" class="form-control" placeholder="Message"></textarea><br>
+        <button class="form-control submit" onclick="sendMail()">SEND MESSAGE</button>
+      </form>
+      <div class="status">
+      </div>
+  </div>
+  <section id="footer">
+    <img src="images/istockphoto-1296961956-1024x1024-removebg-preview.png" class="footer-img">
+    <div class="title-text">
+      <p>MORE INFORMATIONS</p>
+     </div>
+     <div class="footer-row">
+      <div class="footer-left">
+        <img src="images/advalio-removebg-preview.png">
+      </div>
+      <div class="footer-right">
+        <h1>Get In Touch</h1>
+        <p><i class="fa fa-map-marker" ></i>Immeuble Mathis, 571 Souissi, Avenue Mohamed VI, Bloc A 2ème étage, Rabat 10000, Maroc</p>
+        <p><i class="fa fa-paper-plane"></i>contact@advalio-ma.com</p>
+        <p><i class="fa fa-phone"></i>+212 (0) 5 38 00 69 20</p>
+      </div>
+     </div>
+     <div class="social-links">
+      <i class="fa fa-facebook"></i>
+      <i class="fa fa-instagram"></i>
+      <i class="fa fa-twitter"></i>
+      <i class="fa fa-linkedin"></i>
+      <p>© 2017 All rights reserved.</p>
+     </div>
+     <script>
+      var manuBtb = document.getElementById("manuBtn");
+      var sideNav = document.getElementById("sideNav");
+      var menu = document.getElementById("menu");
+      
+      sideNav.style.right="-250px"
+      manuBtb.onclick= function(){
+          if(sideNav.style.right=="-250px"){
+            sideNav.style.right="0";
+            menu.src="images/close.png";
+          }
+          else{
+            sideNav.style.right="-250px";
+            menu.src="images/menu.png";
+          }
+      }
+    </script>
+  </body>
+</html>
